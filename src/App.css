@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #12365a;
+  color: #ffffff;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.App {
+  padding-top: 4rem; 
+}
+
+.desktop-menu {
+  display: none;
+}
+
+.mobile-menu {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .desktop-menu {
+    display: block;
+  }
+  .mobile-menu {
+    display: none;
+  }
+}
+
+#accueil, #competences {
+  background: #185c75;
+}
+
+#projets, #a-propos {
+  background: #7c97a4;
+}
+
+#projets h3, #competences h3, #a-propos h3 {
+  color: #cccccc;
+}
+
+#h1 {
+  font-size: 4rem;
+}
+
+#h2 {
+  font-size: 2rem;
+}
