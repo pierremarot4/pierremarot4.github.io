@@ -6,10 +6,13 @@ import {
   CardContent,
   Grid,
   Tooltip,
+  IconButton,
 } from "@mui/material";
 import WebIcon from "@mui/icons-material/Web";
 import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
 import HomeWorkIcon from "@mui/icons-material/HomeWork";
+import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
+ 
 
 function Projets() {
   const projects = [
@@ -65,7 +68,7 @@ function Projets() {
       <Grid container spacing={2} justifyContent="center">
         {projects.map((project, index) => (
           <Grid item key={index} xs={10} md={10}>
-            <Card
+            <Card 
               sx={{
                 color: "text.primary",
                 transition: "transform 0.3s",
@@ -76,6 +79,9 @@ function Projets() {
                 {project.icon}
                 <Typography variant="h5" component="div">
                   {project.title}
+                  <IconButton component="a" href={project.link} target="_blank">
+                  <OpenInNewRoundedIcon />
+                </IconButton>
                 </Typography>
                 <Typography variant="body2" paragraph>
                   {project.description}
